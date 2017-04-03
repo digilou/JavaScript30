@@ -4,11 +4,15 @@ const hourHand = document.querySelector('#hour-hand');
 
 function setDate(){
   const now = new Date();
+  const audio = document.createElement('audio');
   
   const seconds = now.getSeconds();
   // change seconds to degrees
   const secondsDegrees = ((seconds/60) * 360) + 90;
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+  // add audio ticking
+  audio.setAttribute('src', 'https://github.com/wesbos/JavaScript30/blob/master/01%20-%20JavaScript%20Drum%20Kit/sounds/tink.wav?raw=true');
+  audio.play();
   
   const mins = now.getMinutes();
   // change minutes to degrees
@@ -21,7 +25,7 @@ function setDate(){
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
   
   // change background
-  if(hours >= 7 && hours <= 19){
+  if(hours >= 7 && hours < 19){
     htmlTag = document.documentElement;
     htmlTag.style.background = 'url(https://unsplash.it/1500/1000?image=884)';
   }
