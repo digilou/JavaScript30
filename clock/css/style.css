@@ -33,6 +33,23 @@ body {
   height: 100%;
   transform: translateY(-3px); /* account for the height of the clock hands */
 }
+.num{
+  position:relative;
+  color:white;
+  font-size:2em;
+  font-weight:bold;
+}
+#three{
+  top:27%;
+  left:45%;
+}
+#six{
+  top:57%;
+}
+#nine{
+  top:-4%;
+  left:-45%;
+}
 .hand {
   width:50%;
   height:6px;
