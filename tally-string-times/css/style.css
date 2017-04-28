@@ -1,0 +1,10 @@
+ul {
+  list-style-type: none;
+}
+ul li {
+  padding: 1em;
+  border-bottom: 1px solid gray;
+}
+ul li:hover {
+  background: lightgoldenrodyellow;
+}
